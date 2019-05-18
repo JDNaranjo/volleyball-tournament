@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.VolleyballTournamentGUI">
+   <center>
+      <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab text="Banner">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="442.0" prefWidth="652.0">
+                     <children>
+                        <Label layoutX="299.0" layoutY="14.0" text="Banner" textFill="#136810">
+                           <font>
+                              <Font name="System Italic" size="40.0" />
+                           </font>
+                        </Label>
+                        <AnchorPane layoutX="378.0" layoutY="86.0" prefHeight="129.0" prefWidth="330.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="344.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="294.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="66.0" />
+                              <Label layoutX="48.0" layoutY="19.0" text="Ver Datos" textFill="WHITE" />
+                              <Label fx:id="attendeeInfo" layoutX="135.0" layoutY="264.0" text="Datos" textFill="#136810">
+                                 <font>
+                                    <Font name="System Italic" size="24.0" />
+                                 </font>
+                              </Label>
+                              <ImageView fx:id="attendeeIamage" fitHeight="150.0" fitWidth="200.0" layoutX="66.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@Bart-350x238.jpg" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <VBox layoutX="37.0" layoutY="86.0" prefHeight="395.0" prefWidth="330.0">
+                           <children>
+                              <AnchorPane prefHeight="129.0" prefWidth="330.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="84.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="294.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="91.0" />
+                                    <Label layoutX="48.0" layoutY="19.0" text="Cargar Archivo" textFill="WHITE" />
+                                    <TextField fx:id="uploadTxtBox" layoutX="42.0" layoutY="53.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <Button fx:id="exploreButton" layoutX="165.0" layoutY="53.0" mnemonicParsing="false" onAction="#exploreFile" text="Explorar" />
+                                    <Button fx:id="uploadButton" layoutX="236.0" layoutY="53.0" mnemonicParsing="false" onAction="#uploadFile" prefWidth="60.0" text="Cargar" />
+                                    <Label fx:id="attendeesUpload" layoutX="27.0" layoutY="85.0" text="Los posibles asistentes al evento han sido cargados" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="129.0" prefWidth="330.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="84.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="294.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="118.0" />
+                                    <Label layoutX="48.0" layoutY="19.0" text="Buscar Espectadores" textFill="WHITE" />
+                                    <TextField fx:id="spectatorsTxtBox" layoutX="42.0" layoutY="53.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <Button fx:id="spectatorsButton" layoutX="165.0" layoutY="53.0" mnemonicParsing="false" onAction="#searchSpectator" text="Buscar" />
+                                    <Label fx:id="spectatorNotFound" layoutX="42.0" layoutY="82.0" text="El espectador con id: xxx, no fue encontrado" />
+                                    <Label fx:id="spectatorsTime" layoutX="227.0" layoutY="57.0" text="Tiempo: ... ms" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="10.0" layoutY="139.0" prefHeight="129.0" prefWidth="330.0">
+                                 <children>
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="84.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="294.0" />
+                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="111.0" />
+                                    <Label layoutX="48.0" layoutY="19.0" text="Buscar Participante" textFill="WHITE" />
+                                    <TextField fx:id="participantTxtBox" layoutX="42.0" layoutY="53.0" prefHeight="25.0" prefWidth="115.0" />
+                                    <Button fx:id="participantButton" layoutX="165.0" layoutY="53.0" mnemonicParsing="false" onAction="#searchParticipant" text="Buscar" />
+                                    <Label fx:id="participantNotFound" layoutX="44.0" layoutY="83.0" text="El participante con id: xxx, no fue encontrado" />
+                                    <Label fx:id="participantsTime" layoutX="227.0" layoutY="57.0" text="Tiempo: ... ms" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Visualizar Estructura">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <AnchorPane fx:id="estructurePane" prefHeight="129.0" prefWidth="330.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="410.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="687.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="99.0" />
+                              <Label layoutX="48.0" layoutY="19.0" text="Pintar Estructura" textFill="WHITE" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane layoutX="4.0" layoutY="426.0" prefHeight="101.0" prefWidth="714.0">
+                           <children>
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="63.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="687.0" />
+                              <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="64.0" />
+                              <Label layoutX="48.0" layoutY="19.0" text="Opciones" textFill="WHITE" />
+                              <Button fx:id="pStructureButton" layoutX="188.0" layoutY="42.0" mnemonicParsing="false" onAction="#participantsTree" text="Participantes" />
+                              <Button fx:id="eStructureButton" layoutX="357.0" layoutY="42.0" mnemonicParsing="false" onAction="#spectatorsTree" text="Espectadores" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
