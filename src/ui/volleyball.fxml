@@ -13,7 +13,6 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="722.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.VolleyballTournamentGUI">
    <center>
       <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
@@ -32,9 +31,9 @@
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="344.0" layoutX="17.0" layoutY="23.0" stroke="BLACK" strokeType="INSIDE" width="294.0" />
                               <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#03bc00" height="27.0" layoutX="42.0" layoutY="14.0" stroke="WHITE" strokeType="INSIDE" width="66.0" />
                               <Label layoutX="48.0" layoutY="19.0" text="Ver Datos" textFill="WHITE" />
-                              <Label fx:id="attendeeInfo" layoutX="135.0" layoutY="264.0" text="Datos" textFill="#136810">
+                              <Label fx:id="attendeeInfo" alignment="CENTER" layoutX="63.0" layoutY="217.0" prefHeight="146.0" prefWidth="212.0" text="Datos" textAlignment="CENTER" textFill="#136810">
                                  <font>
-                                    <Font name="System Italic" size="24.0" />
+                                    <Font name="System Italic" size="12.0" />
                                  </font>
                               </Label>
                               <ImageView fx:id="attendeeIamage" fitHeight="150.0" fitWidth="200.0" layoutX="66.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">

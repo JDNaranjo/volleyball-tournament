@@ -26,6 +26,11 @@ public class Spectator extends Attendee {
 		this.prev = prev;
 	}
 
-	
+	@Override
+	public String toString() {
+		return "id: "+getId()+"\n First Name: "+getfName()+"\n Last Name: "+getlName()+
+				"\n Email: "+getEmail()+"\n Gender: "+getGender()+"\n Country: "+getCountry()
+				+"\n Birthday: "+getBirthday();
+	}
 	
 }

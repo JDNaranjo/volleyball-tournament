@@ -45,5 +45,29 @@ public class Tournament {
 	public void setFirstS(Spectator firstS) {
 		this.firstS = firstS;
 	}
+
+	public Spectator idSearchSpectator(String id) {
+		Spectator current = firstS;
+		while(current!=null) {
+			if (current.getId().equals(id)) {
+				return current;
+			}else {
+				current = current.getNext();
+			}
+		}
+		return null;
+	}
+
+	public Participant idSearchParticipant(String id) {
+		Participant current = firstP;
+		while(current!=null) {
+			if (current.getId().equals(id)) {
+				return current;
+			}else {
+				current = current.getNext();
+			}
+		}
+		return null;
+	}
 	
 }
